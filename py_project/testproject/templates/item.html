@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}{{post.title}}{% endblock %}
+
+{% block content %}
+<div>
+	<h2>{{post.title}}</h2>
+	<p>{{post.content}}</p>
+	<em>{{post.author.username}} - {{post.author.username.email}}</em>
+</div>
+{% endblock %}

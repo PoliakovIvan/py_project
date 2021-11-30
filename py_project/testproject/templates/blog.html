@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{page.content}}
+{% for post in posts%}
+	<artical>
+		<h3><a href="{% url 'blog:item' page.id %}">{{post.title}}</a></h3>
+		<em>{{post.author.username}} - {{post.author.username.email}}</em>
+	</artical>
+
+{% empty %}
+<p>Not found</p>
+{% endfor %}
+{% endblock %}
